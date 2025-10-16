@@ -18,49 +18,60 @@ function calcularDescuento($precio, $categoria)
     $desc=$precio*0.05;
     $precio=$precio-$desc;
     }
-
+    echo $precio;
     return $precio;
 }
 
+calcularDescuento(78,'ropa');
 //Problema 2: El Juego "FizzBuzz" Crea una función fizzBuzz($numero)
 //que reciba un número y devuelva:
 function fizzBuzz($numero)
 {
     if($numero%3==0&&$numero%5==0){
+        echo 'FizzBuzz';
         return 'FizzBuzz';
     }
     else if($numero%3==0){
+        echo 'Fizz';
         return 'Fizz';
     }
     else if($numero%5==0){
+        echo 'Buzz';
         return 'Buzz';
     }
     else{
+        echo $numero;
         return $numero;
     }
 }
+
+$numerin=25;
+fizzBuzz($numerin);
 
 //Problema 3: Validador de Contraseña Crea una función validarContraseña($pass)
 //que verifique la fortaleza de una contraseña y devuelva un string:
 function validarContrasena($pass)
 {
   if(strlen($pass)<8){
+      echo 'Debil';
       return 'Debil';
   }
   else if (strlen($pass)>8&&preg_match('/[A-Z]/', $pass)&&preg_match('/[0-9]/', $pass)) {
+      echo 'Alta';
       return 'Alta';
   }
 
   else if(strlen($pass)>8){
+      echo 'Media';
       return 'Media';
   }
 }
-
+$passw='ehcboH5';
+validarContrasena($passw);
 
 //Problema 4: Encontrar el Valor Máximo Crea una función encontrarMaximo($array)
 //que reciba un array de números y devuelva el número más alto del array
-//1 q   q   32sin usar la función max() de PHP.
-
+//1 q   q   32sin usar la función max() de PHP
 function encontrarMaximo($array)
 {
     $max=0;
@@ -74,9 +85,8 @@ function encontrarMaximo($array)
 }
 $arra=[10, 5, 20, 1, 50, 7, 33, 12, 45, 9];
 encontrarMaximo($arra);
+
 //Problema 5: Filtrar Usuarios por Criterio Dado el siguiente array de usuarios:
-
-
 function filtrarUsuario($usuarios)
 {
     $users=[];
@@ -86,6 +96,7 @@ function filtrarUsuario($usuarios)
             print_r($usuario) ;
         }
     }
+
     return $users;
 }
 
